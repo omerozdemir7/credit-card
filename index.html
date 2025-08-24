@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canlı Kredi Kartı Önizleme</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="card-wrap">
+      <div id="card" class="card">
+        <div class="card-face">
+          <div class="row">
+            <div class="brand">BANKA KARTI</div>
+            <div class="logo">Visa ••</div>
+          </div>
+          <div class="row" style="margin-top: 18px">
+            <div class="chip"></div>
+            <div class="wave"></div>
+          </div>
+          <div id="cc-number" class="number">0000 0000 0000 0000</div>
+          <div class="name-exp">
+            <div>
+              <div class="label">Kart Sahibi</div>
+              <div id="cc-name" class="value">AD SOYAD</div>
+            </div>
+            <div>
+              <div class="label">Son Kullanma</div>
+              <div id="cc-exp" class="value">MM/YY</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-face card-face--back" style="transform: rotateY(180deg)">
+          <div class="mag"></div>
+          <div class="label">Güvenlik Kodu</div>
+          <div id="cc-cvv" class="cvv-line">•••</div>
+          <div class="small-print">Bu bir demo tasarımdır.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Bilgileri Girin</h2>
+      <div class="grid">
+        <div class="span2">
+          <label for="name">Kart Sahibi</label>
+          <input id="name" placeholder="Ad Soyad (ör. Ömer ÖZDEMİR)" autocomplete="off" />
+        </div>
+        <div class="span2">
+          <label for="number">Kart Numarası</label>
+          <input id="number" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="off" />
+          <div class="hint">
+            Sadece rakam girin — otomatik olarak 4'lü gruplara ayrılır.
+          </div>
+        </div>
+        <div>
+          <label for="exp">Son Kullanma (AA/YY)</label>
+          <input id="exp" inputmode="numeric" placeholder="MM/YY" maxlength="5" autocomplete="off" />
+        </div>
+        <div>
+          <label for="cvv">CVV</label>
+          <input id="cvv" inputmode="numeric" placeholder="•••" maxlength="4" autocomplete="off" />
+        </div>
+      </div>
+      <p class="note">
+        Not: Girilen veriler sadece tarayıcınızda canlı önizleme için
+        kullanılır.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
